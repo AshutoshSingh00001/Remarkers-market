@@ -7,10 +7,11 @@ import {
   Spinner,
   IconButton,
   Carousel,
+  Input,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { MediaRenderer } from "@thirdweb-dev/react";
-import { ArrowUpIcon, ArrowDownIcon } from "@heroicons/react/24/outline";
+import { ArrowUpIcon, ArrowDownIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import kus from '/src/assets/COLLECTABLES BY KUS - FINAL - -min.png'
 
 export default function PAHExplore() {
@@ -113,14 +114,12 @@ export default function PAHExplore() {
 
     <br />
       <div className="relative w-full md:w-1/2">
-        <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-6 w-6 text-gray-500">
-            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-          </svg>
-        </span>
-        <input
+        <Input
           type="text"
           value={searchTerm}
+          color="pink"
+          icon={ <MagnifyingGlassIcon color="pink"/>}
+          label="Search Collection"
           onChange={handleInputChange}
           placeholder="Search Collection"
           className="pl-10 pr-4 py-2 w-full border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
@@ -190,21 +189,6 @@ export default function PAHExplore() {
                                 }}
                                 alt=""
                               />}
-                              {error && (
-                                <>
-                                                               <MediaRenderer
-                                src={"ipfs://QmVyn3qDGJg4JxV2QbUW4tgiMfV5ho84DbwELFaoyVLtDZ"}
-                                className="card-image"
-                                style={{
-                                  width: '50px',
-                                  height: '50px',
-                                  borderRadius: '10px',
-                                  display: isLoading || error ? 'none' : 'block',
-                                }}
-                                alt=""
-                              />
-                                </>
-                              )}
                               <MediaRenderer
                                 src={ipfsUri}
                                 className="card-image"
@@ -216,10 +200,6 @@ export default function PAHExplore() {
                                 }}
                                 alt=""
                                 onLoad={() => setIsLoading(false)}
-                                onError={() => {
-                                  setIsLoading(false);
-                                  setError(true);
-                                }}
                               />
                             </div>
                             <div className="text-container">
