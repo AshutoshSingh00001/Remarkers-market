@@ -3082,7 +3082,7 @@ const ipfsItemUri = `ipfs://${ipfsItemHash}`;
               color="pink"
             />
           </div>
-          <Typography color="blue-gray" className="font-medium">
+          <Typography color="blue-gray" className="font-medium" style={{marginLeft: "20px"}}>
             Buy now
           </Typography>
         </label>
@@ -3102,7 +3102,7 @@ const ipfsItemUri = `ipfs://${ipfsItemHash}`;
               color="pink"
             />
           </div>
-          <Typography color="blue-gray" className="font-medium">
+          <Typography color="blue-gray" className="font-medium" style={{marginLeft: "20px"}}>
             Owned
           </Typography>
         </label>
@@ -3985,8 +3985,8 @@ const ipfsItemUri = `ipfs://${ipfsItemHash}`;
           {
             isMobile? null : (
               <>
-                        <Card className="w-full  max-w-lg mx-auto shadow-lg overflow-hidden">
-    <CardBody className="w-full ">
+                        <Card className=" max-w-lg mx-auto shadow-lg overflow-hidden">
+    <CardBody className="max-w-lg ">
     <MediaRenderer src={ipfsItemUri} alt=""
                 style={{ width: '100%', height: 'auto' }} />
     </CardBody>

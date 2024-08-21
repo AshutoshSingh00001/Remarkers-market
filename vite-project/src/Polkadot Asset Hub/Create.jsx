@@ -1057,6 +1057,7 @@ export default function PAHCreate( ) {
     <Card className="mt-6 w-96">
   <Badge
     content={<CheckIcon className="h-2 w-2 text-white" strokeWidth={2.5} />}
+    color="pink"
     className="absolute right-0 bg-gradient-to-tr from-pink-400 to-pink-600 border-2 border-white shadow-lg shadow-black/20"
     style={{ padding: '0.25rem', minWidth: '1.5rem', minHeight: '1.5rem' }}
   >

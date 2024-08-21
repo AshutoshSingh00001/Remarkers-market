@@ -171,50 +171,50 @@ export default function PAHExplore() {
 
                   return name && description && image ? (
                     <tr className="even:bg-blue-gray-50/50 hover:bg-blue-gray-50" key={id}>
-                      <td className="p-4">
-                      <Link
-      to={`/Polkadot%20Asset%20Hub/marketplace/${id}/${name}`}
-    >
-                          <div className="card-content-container">
-                            <div className="image-container">
-                              {isLoading && !error &&  
-                              <MediaRenderer
-                                src={"ipfs://QmVyn3qDGJg4JxV2QbUW4tgiMfV5ho84DbwELFaoyVLtDZ"}
-                                className="card-image"
-                                style={{
-                                  width: '50px',
-                                  height: '50px',
-                                  borderRadius: '10px',
-                                  display: isLoading || error ? 'none' : 'block',
-                                }}
-                                alt=""
-                              />}
-                              <MediaRenderer
-                                src={ipfsUri}
-                                className="card-image"
-                                style={{
-                                  width: '50px',
-                                  height: '50px',
-                                  borderRadius: '10px',
-                                  display: isLoading || error ? 'none' : 'block',
-                                }}
-                                alt=""
-                                onLoad={() => setIsLoading(false)}
-                              />
-                            </div>
-                            <div className="text-container">
-                              <Typography color="blue-gray" className="font-medium font-bold card-content">
-                                {name.length > 30 ? `${name.substring(0, 30)}...` : name}
-                              </Typography>
-                            </div>
-                          </div>
-                        </Link>
-                      </td>
-                      <td className="p-4">
-                        <Typography variant="h7" color="gray" className="font-normal">
-                          {volume} DOT
-                        </Typography>
-                      </td>
+<td className="p-4">
+  <Link to={`/Polkadot%20Asset%20Hub/marketplace/${id}/${name}`}>
+    <div className="card-content-container" style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="image-container" style={{ marginRight: '10px' }}>
+        {isLoading && !error && (
+          <MediaRenderer
+            src={"ipfs://QmVyn3qDGJg4JxV2QbUW4tgiMfV5ho84DbwELFaoyVLtDZ"}
+            className="card-image"
+            style={{
+              width: '50px',
+              height: '50px',
+              borderRadius: '10px',
+              display: isLoading || error ? 'none' : 'block',
+            }}
+            alt=""
+          />
+        )}
+        <MediaRenderer
+          src={ipfsUri}
+          className="card-image"
+          style={{
+            width: '50px',
+            height: '50px',
+            borderRadius: '10px',
+            display: isLoading || error ? 'none' : 'block',
+          }}
+          alt=""
+          onLoad={() => setIsLoading(false)}
+        />
+      </div>
+      <div className="text-container" style={{ maxWidth: '150px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        <Typography color="blue-gray" className="font-medium font-bold card-content">
+          {name}
+        </Typography>
+      </div>
+    </div>
+  </Link>
+</td>
+<td className="p-4">
+  <Typography variant="h7" color="gray" className="font-normal">
+    {volume} DOT
+  </Typography>
+</td>
+
                       <td className="p-4">
                         <Typography as="a" href="#" variant="h7" color="gray" className="font-medium">
                           {floor} DOT
