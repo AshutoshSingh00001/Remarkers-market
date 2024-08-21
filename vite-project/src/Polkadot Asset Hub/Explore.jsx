@@ -201,7 +201,7 @@ export default function PAHExplore() {
           onLoad={() => setIsLoading(false)}
         />
       </div>
-      <div className="text-container" style={{ maxWidth: '150px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+      <div className="text-container" style={{ maxWidth: '150px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
         <Typography color="blue-gray" className="font-medium font-bold card-content">
           {name}
         </Typography>
