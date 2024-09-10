@@ -2393,7 +2393,7 @@ const ipfsItemUri = `ipfs://${ipfsItemHash}`;
                                                                                       <div style={{display: "flex", alignItems: "center"}}>
                         {nameData}
                         {
-                          id === "165" || id === "7" || id === "173" ? (
+                          id === "165" || id === "173" ? (
                             <>
                                                         <Tooltip
       content={
@@ -2627,7 +2627,7 @@ const ipfsItemUri = `ipfs://${ipfsItemHash}`;
                                           <div style={{display: "flex", alignItems: "center"}}>
                         {nameData}
                         {
-                          id === "165" || id === "7" || id === "173" ? (
+                          id === "165" || id === "173" ? (
                             <>
                                                         <Tooltip
       content={
