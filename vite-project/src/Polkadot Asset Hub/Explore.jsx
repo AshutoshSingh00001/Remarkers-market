@@ -164,7 +164,7 @@ export default function PAHExplore() {
             </thead>
             <tbody>
               {sortedData
-                .filter(({ burned, id, name }) => !burned && id && !id.startsWith('u') && id !== '127' && id !== '161' && name && name.toLowerCase().includes(searchTerm.toLowerCase()))
+                .filter(({ burned, id, name }) => !burned && id && !id.startsWith('u') && id !== '127' && id !== '161' && id !== '7' && name && name.toLowerCase().includes(searchTerm.toLowerCase()))
                 .map(({ id, name, description, image, owner, maxSupply, distribution, floor, highestSale, royalty, nftCount, createdDate, volume }, index) => {
                   const ipfsHash = image?.replace(/^(ipfs:\/\/ipfs\/|ipfs:\/\/)/, '') || '';
                   const ipfsUri = ipfsHash? `ipfs://${ipfsHash}` : "ipfs://QmVyn3qDGJg4JxV2QbUW4tgiMfV5ho84DbwELFaoyVLtDZ";
